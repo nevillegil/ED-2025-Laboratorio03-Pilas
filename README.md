@@ -113,7 +113,7 @@ Ejemplo 11: (3[+2]*5)+[4-2]     TRUE = TRUE  OK
 
 
 
-# Ejercicio 2: Operaciones avanzadas con pilas
+# Ejercicio 2: Operaciones avanzadas con pilas dinámicas
 
 En este ejercicio, trabajaremos con operaciones avanzadas de pilas. Para ello, se proporcionan dos archivos Pascal:
 
@@ -377,3 +377,15 @@ Ejemplo 5: reconocer        TRUE = TRUE  OK
 Ejemplo 6: oso              TRUE = TRUE  OK
 Ejemplo 7: mameluco         FALSE = FALSE OK
 ```
+
+# Ejercicio 5: Operaciones avanzadas con pilas con arrays
+
+En este ejercicio, trabajaremos con operaciones avanzadas de pilas utilizando arrays. Para ello, se proporcionan dos archivos Pascal:
+
+
+- `uPilaIntegerExtendedArray.pas`
+- `pilas_ej5.pas`
+
+Se deberá implementar las mismas funciones que en el Ejercicio 2, pero utilizando arrays en lugar de pilas dinámicas.
+
+De manera similar, se deberá usar el archivo `uPilaIntegerExtendedArray.pas` para definir la pila de enteros extendida con arrays. Por otro lado, el archivo `pilas_ej5.pas` es el programa principal que se utilizará para comprobar el correcto funcionamiento de las funciones implementadas.
