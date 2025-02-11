@@ -10,9 +10,26 @@
 | Universidad   | Universidad Rey Juan Carlos        |
 | Curso         | 2024/2025                          |
 
+
+# ¿Cómo enfrentarse a los ejercicios?
+
 Antes de comenzar con cada uno de los ejercicios: 
 
 1. Lee detenidamente el enunciado **completo**.
+2. Identifica cuál es el objetivo del ejercicio:
+    - Modificar el tipo de elementos almacenados en la pila: 
+        - Ejemplos: enteros, caracteres, registros, etc.
+        - Esto implicará modificar la definición de los nodos de la pila (o el tipo de array en caso de no ser una pila dinámica).
+        - Es decir, deberemos extender o modificar la definición de la pila, deberemos **trabajar en la propia unidad** de la pila.
+    - Extender o mejorar funcionalidades de la pila:
+        - Ejemplos: contar el número de elementos de la pila, verificar si un elemento está en la pila, eliminar un elemento, etc.
+        - Generar nuevos procedimientos o funciones requerirá utilizar las operaciones principales.
+        - Es decir, nuevamente deberemos **trabajar en la propia unidad** de la pila ya que estamos extendiendo su funcionalidad.
+    - Utilizar la pila para resolver un problema específico:
+        - Ejemplos: verificar si una expresión aritmética está balanceada, verificar si una palabra es palíndroma, utilizarla para representar un conjunto de elementos, etc.
+        - En este caso, deberemos utilizar las operaciones básicas de la pila para resolver el problema, no deberemos modificar la definición de la pila.
+        - Por lo tanto, deberemos **usar** la pila en el programa principal para resolver el problema.
+    
 2. Abre cada uno de los archivos proporcionados y estudia el código proporcionado.
 3. Haz que el programa compile y ejecuta el programa aunque no haga lo que se pide.
 4. Realiza los ejercicios de manera ordenada, comprobando que cada uno de ellos funciona correctamente antes de pasar al siguiente.
@@ -45,7 +62,7 @@ Este archivo contiene la definición de la pila de caracteres. La pila de caract
 
 - **Devuelve el elemento de la cima de la pila**
     ```pascal
-    function peek(p: tPilaChars): char;
+    procedure peek(p: tPilaChars; var x: char);
     ```
 
 - **Devuelve true si la pila está vacía**
