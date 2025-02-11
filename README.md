@@ -17,18 +17,18 @@ Antes de comenzar con cada uno de los ejercicios:
 
 1. Lee detenidamente el enunciado **completo**.
 2. Identifica cuál es el objetivo del ejercicio:
-    - Modificar el tipo de elementos almacenados en la pila: 
+    - Identificar el tipo de elementos que se amlacenará en la pila: 
         - Ejemplos: enteros, caracteres, registros, etc.
-        - Esto implicará modificar la definición de los nodos de la pila (o el tipo de array en caso de no ser una pila dinámica).
-        - Es decir, deberemos extender o modificar la definición de la pila, deberemos **trabajar en la propia unidad** de la pila.
-    - Extender o mejorar funcionalidades de la pila:
+        - Esto va a determinar la definición de los nodos de la pila (o el tipo de array en caso de no ser una pila dinámica).
+        - Es decir, deberemos **trabajar en la propia unidad** de la pila. Tendremos el ``rol'' de implementador de la unidad.
+    - Extender o modificar funcionalidades de la pila:
         - Ejemplos: contar el número de elementos de la pila, verificar si un elemento está en la pila, eliminar un elemento, etc.
         - Generar nuevos procedimientos o funciones requerirá utilizar las operaciones principales.
-        - Es decir, nuevamente deberemos **trabajar en la propia unidad** de la pila ya que estamos extendiendo su funcionalidad.
+        - Es decir, nuevamente deberemos **trabajar en la propia unidad** de la pila ya que estamos extendiendo su funcionalidad. Tendremos el ``rol'' de implementador de la unidad.
     - Utilizar la pila para resolver un problema específico:
         - Ejemplos: verificar si una expresión aritmética está balanceada, verificar si una palabra es palíndroma, utilizarla para representar un conjunto de elementos, etc.
-        - En este caso, deberemos utilizar las operaciones básicas de la pila para resolver el problema, no deberemos modificar la definición de la pila.
-        - Por lo tanto, deberemos **usar** la pila en el programa principal para resolver el problema.
+        - En este caso, deberemos utilizar las operaciones básicas de la unidad de la pila para resolver el problema, no podemos modificar la definición de la pila.
+        - Por lo tanto, deberemos **usar** la pila en el programa principal para resolver el problema. Tendremos el rol de usuario externo de la unidad pila y por lo tanto no la podremos modificar.
     
 2. Abre cada uno de los archivos proporcionados y estudia el código proporcionado.
 3. Haz que el programa compile y ejecuta el programa aunque no haga lo que se pide.
