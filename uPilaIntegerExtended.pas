@@ -30,7 +30,7 @@ interface
     { Elimina el elemento de la cima de la pila }
     procedure pop(var p: tPilaEnterosExt);
     { Devuelve el elemento de la cima de la pila }
-    function peek(p: tPilaEnterosExt): integer;
+    procedure peek(p: tPilaEnterosExt; var x: integer);
     { Devuelve true si la pila esta vacia }
     function isEmpty(p: tPilaEnterosExt): boolean;
     { Otros métodos }
@@ -109,9 +109,10 @@ implementation
     end;
 
     { Devuelve el elemento la cima de la pila }
-    function peek(p: tPilaEnterosExt): integer;
+    procedure peek(p: tPilaEnterosExt; var x: integer);
     begin
-        peek := p.pila^.info; { Devuelve el valor de la cima de la pila }
+        if not isEmpty(p) then
+            x := p.pila^.info; { Devuelve el valor de la cima de la pila }
     end;
 
         { Libera los recursos de la pila }
