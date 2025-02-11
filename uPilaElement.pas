@@ -77,7 +77,8 @@ end;
 { Devuelve el elemento de la cima de la pila }
 procedure peek(p: tPilaElementos; var x: TElement);
 begin
-    x := p^.info; { Devuelve el valor de la cima de la pila }
+    if not isEmpty(p) then
+        x := p^.info; { Devuelve el valor de la cima de la pila }
 end;
 
     { ----------------------------------------------------- }
