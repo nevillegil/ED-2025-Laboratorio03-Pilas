@@ -27,7 +27,7 @@ const
     { Elimina el elemento de la cima de la pila }
     procedure pop(var p: tPilaEnterosExt);
     { Devuelve el elemento de la cima de la pila }
-    function peek(p: tPilaEnterosExt): integer;
+    procedure peek(p: tPilaEnterosExt; var x: integer);
     { Devuelve true si la pila está vacía }
     function isEmpty(p: tPilaEnterosExt): boolean;
 
@@ -74,76 +74,71 @@ implementation
 
     { ------------------------ Funciones básicas de las pilas ------------------------ }
 
-{ Inicializa la pila }
-procedure initialize(var p: tPilaEnterosExt);
-begin
-    p.cima := 0;
-end;
-
-{ Agrega un elemento a la pila }
-procedure push(var p: tPilaEnterosExt; x: integer);
-begin
-    if p.cima < MAX_ELEMENTOS then
+    { Inicializa la pila }
+    procedure initialize(var p: tPilaEnterosExt);
     begin
-        p.cima := p.cima + 1;
-        p.stack[p.cima] := x;
-    end
-    else
-        writeln('Stack is full');
-end;
-
-{ Elimina el elemento de la cima de la pila }
-procedure pop(var p: tPilaEnterosExt);
-begin
-    if p.cima > 0 then
-    begin
-        p.cima := p.cima - 1;
-    end
-end;
-
-{ Devuelve el elemento de la cima de la pila }
-function peek(p: tPilaEnterosExt): integer;
-begin
-    if p.cima > 0 then
-        peek := p.stack[p.cima]
-    else
-    begin
-        peek := -1; // Retornamos un valor que no se pueda introducir en la pila. 
+        p.cima := 0;
     end;
-end;
 
-{ Devuelve true si la pila está vacía }
-function isEmpty(p: tPilaEnterosExt): boolean;
-begin
-    isEmpty := p.cima = 0;
-end;
-
-
-{ Devuelve true si la pila está llena }
-function isFull(p: tPilaEnterosExt): boolean;
-begin
-    isFull := p.cima = MAX_ELEMENTOS;
-end;
-
-{ Libera los recursos de la pila }
-procedure clear(var p: tPilaEnterosExt);
-begin
-    p.cima := 0; // Los elementos se sobreescribirán en futuras inserciones
-end;
-
-{ Imprime los elementos de la pila }
-function toString(p: tPilaEnterosExt): string;
-var
-    i: integer;
-    s: string;
-begin
-    s := '';
-    for i := 0 to p.cima - 1 do
+    { Agrega un elemento a la pila }
+    procedure push(var p: tPilaEnterosExt; x: integer);
     begin
-        s := s + IntToStr(p.stack[p.cima-i]) + ' ';
+        if not isFull(p) then
+        begin
+            p.cima := p.cima + 1;
+            p.stack[p.cima] := x;
+        end;
     end;
-    toString := s;
-end;
+
+    { Elimina el elemento de la cima de la pila }
+    procedure pop(var p: tPilaEnterosExt);
+    begin
+        if p.cima > 0 then
+        begin
+            p.cima := p.cima - 1;
+        end
+    end;
+
+    { Devuelve el elemento de la cima de la pila }
+    procedure peek(p: tPilaEnterosExt; var x: integer);
+    begin
+        if not isEmpty(p) then
+            x := p.stack[p.cima];
+    end;
+
+    { Devuelve true si la pila está vacía }
+    function isEmpty(p: tPilaEnterosExt): boolean;
+    begin
+        isEmpty := p.cima = 0;
+    end;
+
+
+    { Devuelve true si la pila está llena }
+    function isFull(p: tPilaEnterosExt): boolean;
+    begin
+        isFull := p.cima = MAX_ELEMENTOS;
+    end;
+
+    { Libera los recursos de la pila }
+    procedure clear(var p: tPilaEnterosExt);
+    begin
+        p.cima := 0; // Los elementos se sobreescribirán en futuras inserciones
+    end;
+
+    { Imprime los elementos de la pila }
+    function toString(p: tPilaEnterosExt): string;
+    var
+        i: integer;
+        s: string;
+    begin
+        s := '';
+        for i := 0 to p.cima - 1 do
+        begin
+            s := s + IntToStr(p.stack[p.cima-i]) + ' ';
+        end;
+        toString := s;
+    end;
+
 
 
     { ------------------------ Ejercicios ------------------------ }
