@@ -261,7 +261,7 @@ Ejercicio 2.8: TRUE
 
 # Ejercicio 3: Genericos: Inversión de Pila de Elementos
 
-En este ejercicio, trabajaremos con la inversión de una pila de elementos. Para ello, se proporcionan tres archivos Pascal:
+En este ejercicio, trabajaremos un TAD genérico. Aquí tomaremos de nuevo el rol de implementador del TAD genérico "Pila de Elementos" y añadiremos al mismo una nueva funcionalidad que permita invertir una pila de elemento. Para ello se proporcionan tres archivos Pascal:
 
 - `uPilaElement.pas`
 - `uTElement.pas`
