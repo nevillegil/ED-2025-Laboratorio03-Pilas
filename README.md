@@ -232,7 +232,6 @@ Define un procedimiento `repetirN` para repetir n veces los elementos de la pila
 - **Ejemplos**:
     - `repetirN([1, 2, 3], 2)` -> `[1, 1, 2, 2, 3, 3]`
     - `repetirN([1, 2, 3], 1)` -> `[1, 2, 3]`
-    - `repetirN([], 2)` -> `[]`
 
 ### 2.8 contarApariciones:
 
