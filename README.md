@@ -108,7 +108,7 @@ Mejora la función `balanceada`, utilizando una pila de caracteres, para que com
 
 ## Comprobar el correcto funcionamiento de las funciones implementadas
 
-En el programa principal, `pilas_ej1.pas`, se proporcionan 11 casos de prueba. Cuando se ejecute, se verá una tabla como esta:
+En el programa principal, `pilas_ej1.pas`, se proporcionan 11 casos de prueba. Una vez hayas implementado las funciones de los ejercicios 1.2 y 1.3 en `pilas_ej1.pas` podrás ejecutar este programa principal y comprobar tu código. Cuando se ejecute, se mostrará una tabla como la siguiente:
 
 ```
 Ejemplo #  Expresión            Res = Esp    OK/ERROR
@@ -130,7 +130,7 @@ Ejemplo 11: (3[+2]*5)+[4-2]     TRUE = TRUE  OK
 
 # Ejercicio 2: Operaciones avanzadas con pilas dinámicas
 
-En este ejercicio, trabajaremos con operaciones avanzadas de pilas. Para ello, se proporcionan dos archivos Pascal:
+En este ejercicio vamos a tomar el rol de implementador de un TAD pila y, a partir de una unit ya implementada, vamos a ampliarla añadiéndole operaciones avanzadas de pilas. Para ello, se proporcionan dos archivos Pascal:
 
 - `uPilaIntegerExtended.pas`
 - `pilas_ej2.pas`
@@ -138,7 +138,7 @@ En este ejercicio, trabajaremos con operaciones avanzadas de pilas. Para ello, s
 
 El archivo `uPilaIntegerExtended.pas` contiene la definición de la pila de enteros extendida. Por otro lado, el archivo `pilas_ej2.pas` es el programa principal que se utilizará para comprobar el correcto funcionamiento de las funciones implementadas.
 
-Concretamente, las operaciones que se pueden realizar con la pila de enteros extendida en el archivo `uPilaIntegerExtended.pas` son:
+Concretamente, las operaciones que queremos implementar con la pila de enteros extendida en el archivo `uPilaIntegerExtended.pas` son:
 
 ### 2.1 contarElementos: 
 
@@ -155,8 +155,7 @@ Puede que modificar el registros tPilaEnterosExt...
 
 ### 2.2 ultimo:
 
-Define una función `ultimo` para obtener el elemento en la última posición de la pila. Es decir, el entero que se encuentra sumergido en la pila. 
-Se puede entender esta función como una operación opuesta "peek" en la pila.
+Define una función `ultimo` para obtener el elemento en el fondo de la pila, sin modificarla. Es decir, el entero que se encuentra sumergido en el extremo opuesto de la cima de la pila, por lo que se podría entender esta función como una operación opuesta a "peek" en la pila.
 
 - **Entradas**:
     - Pila de enteros.
@@ -164,7 +163,7 @@ Se puede entender esta función como una operación opuesta "peek" en la pila.
     - Devuelve el elemento en la última posición de la pila.
 - **Ejemplos**:
     - `[1, 2, 3, 4, 5]` -> `5`
-    - `[]` -> `0`
+    - `[]` -> `indeterminado`
     - `[1, 2, 3]` -> `3`
 
 ### 2.3 combinar:
@@ -176,9 +175,9 @@ Define un procedimiento `combinar` para combinar dos pilas en una sola.
 - **Salida**:
     - Modifica la primera pila con los elementos de ambas pilas. El orden de los elementos de la segunda pila debe ser el mismo que el original. La segunda pila queda vacía.
 - **Ejemplos**:
-    - `combinar([1, 2, 3], [4, 5, 6])` -> `[4, 5, 6, 1, 2, 3]`
-    - `combinar([], [4, 5, 6])` -> `[4, 5, 6]`
-    - `combinar([1, 2, 3], [])` -> `[1, 2, 3]`
+    - `combinar([1, 2, 3], [4, 5, 6])` -> La primera pila pasa a ser: `[4, 5, 6, 1, 2, 3]`
+    - `combinar([], [4, 5, 6])` ->  La primera pila pasa a ser: `[4, 5, 6]`
+    - `combinar([1, 2, 3], [])` ->  La primera pila pasa a ser: `[1, 2, 3]`
 
 ### 2.4 popN:
 
@@ -187,15 +186,15 @@ Define un procedimiento `popN` para hacer "pop" n veces.
 - **Entradas**:
     - Pila de enteros, entero n.
 - **Salida**:
-    - Modifica la pila eliminando los n elementos de la cima.
+    - Modifica la pila eliminando (un máximo de) n elementos de la cima.
 - **Ejemplos**:
     - `popN([1, 2, 3, 4, 5], 2)` -> `[3, 4, 5]`
-    - `popN([1, 2, 3, 4, 5], 5)` -> `[]`
+    - `popN([1, 2, 3, 4, 5], 20)` -> `[]`
     - `popN([1, 2, 3, 4, 5], 0)` -> `[1, 2, 3, 4, 5]`
 
 ### 2.5 sumarN:
 
-Define un procedimiento `sumarN` para sumar los n primeros elementos de una pila y reemplazarlos por la suma.
+Define un procedimiento `sumarN` para sumar los n primeros elementos de una pila y reemplazarlos por su suma.
 
 - **Entradas**:
     - Pila de enteros, entero n.
