@@ -226,75 +226,11 @@ begin
     { Ejemplo 2: repetirN([1, 2, 3], 0) -> [1, 2, 3] }
     ejemplo2 := '1,2,3';
     inicializarPilaConElementos(p, ejemplo2);
-    repetirN(p, 0);
+    repetirN(p, 1);
     test_correcto := test_correcto and (toString(p) = '1 2 3 ');
-
-    { Ejemplo 3: repetirN([], 2) -> [] }
-    ejemplo3 := '';
-    inicializarPilaConElementos(p, ejemplo3);
-    repetirN(p, 2);
-    test_correcto := test_correcto and isEmpty(p);
-    testRepetirN := test_correcto;
 end;
 
 { Ejercicio 5.8 }
-function testInsertarEnN: boolean;
-var
-    p: tPilaEnterosExt;
-    ejemplo1, ejemplo2, ejemplo3, ejemplo4: string;
-    test_correcto: boolean;
-begin
-    test_correcto := true;
-    { Ejemplo 1: insertarEnN([1, 2, 3, 4, 5], 10, 2) -> [1, 10, 2, 3, 4, 5] }
-    ejemplo1 := '1,2,3,4,5';
-    inicializarPilaConElementos(p, ejemplo1);
-    insertarEnN(p, 10, 2);
-    test_correcto := toString(p) = '1 10 2 3 4 5 ';
-
-    { Ejemplo 2: insertarEnN([1, 2, 3, 4, 5], 10, 1) -> [10, 1, 2, 3, 4, 5] }
-    ejemplo2 := '1,2,3,4,5';
-    inicializarPilaConElementos(p, ejemplo2);
-    insertarEnN(p, 10, 1);
-    test_correcto := test_correcto and (toString(p) = '10 1 2 3 4 5 ');
-
-    { Ejemplo 3: insertarEnN([1, 2, 3, 4, 5], 10, 5) -> [1, 2, 3, 4, 10, 5] }
-    ejemplo3 := '1,2,3,4,5';
-    inicializarPilaConElementos(p, ejemplo3);
-    insertarEnN(p, 10, 5);
-    test_correcto := test_correcto and (toString(p) = '1 2 3 4 10 5 ');
-
-    { Ejemplo 4: insertarEnN([1, 2, 3, 4, 5], 10, 6) -> [1, 2, 3, 4, 5, 10] }
-    ejemplo4 := '1,2,3,4,5';
-    inicializarPilaConElementos(p, ejemplo4);
-    insertarEnN(p, 10, 6);
-    test_correcto := test_correcto and (toString(p) = '1 2 3 4 5 10 ');
-
-    testInsertarEnN := test_correcto;
-end;
-
-{ Ejercicio 5.9 }
-function testIntercambiarMaxMin: boolean;
-var
-    p: tPilaEnterosExt;
-    ejemplo1, ejemplo2: string;
-    test_correcto: boolean;
-begin
-    test_correcto := true;
-    { Ejemplo 1: intercambiarMaxMin([1, 2, 3, 4, 5]) -> [5, 2, 3, 4, 1] }
-    ejemplo1 := '1,2,3,4,5';
-    inicializarPilaConElementos(p, ejemplo1);
-    intercambiarMaxMin(p);
-    test_correcto := toString(p) = '5 2 3 4 1 ';
-
-    { Ejemplo 2: intercambiarMaxMin([1, 2, 3, 4, 5, 6]) -> [6, 2, 3, 4, 5, 1] }
-    ejemplo2 := '1,2,3,4,5,6';
-    inicializarPilaConElementos(p, ejemplo2);
-    intercambiarMaxMin(p);
-    test_correcto := test_correcto and (toString(p) = '6 2 3 4 5 1 ');
-    testIntercambiarMaxMin := test_correcto;
-end;
-
-{ Ejercicio 5.10 }
 function testContarApariciones: boolean;
 var
     p: tPilaEnterosExt;
@@ -328,8 +264,6 @@ begin
     WriteLn('Ejercicio 5.5: ', testSumarN);
     WriteLn('Ejercicio 5.6: ', testInvertir);
     WriteLn('Ejercicio 5.7: ', testRepetirN);
-    WriteLn('Ejercicio 5.8: ', testInsertarEnN);
-    WriteLn('Ejercicio 5.9: ', testIntercambiarMaxMin);
-    WriteLn('Ejercicio 5.10: ', testContarApariciones);
+    WriteLn('Ejercicio 5.8: ', testContarApariciones);
     readln;
 end.

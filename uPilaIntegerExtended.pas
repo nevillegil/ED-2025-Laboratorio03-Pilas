@@ -56,11 +56,7 @@ interface
     procedure invertir(var p: tPilaEnterosExt);
     { 2.7 Repetir n veces }
     procedure repetirN(var p: tPilaEnterosExt; n: integer);
-    { 2.8 Insertar en n }
-    procedure insertarEnN(var p: tPilaEnterosExt; x, n: integer);
-    { 2.9 Intercambiar Max y Min }
-    procedure intercambiarMaxMin(var p: tPilaEnterosExt);
-    { 2.10 Contar apariciones de elemento n }
+    { 2.8 Contar apariciones de elemento n }
     function contarApariciones(var p: tPilaEnterosExt; n: integer): integer;
 
 
@@ -257,8 +253,7 @@ implementation
         Salida: se modifica la pila repitiendo n veces los elementos.
         Ejemplos: 
             - repetirN([1, 2, 3], 2) -> [1, 1, 2, 2, 3, 3]
-            - repetirN([1, 2, 3], 0) -> [1, 2, 3]
-            - repetirN([], 2) -> []
+            - repetirN([1, 2, 3], 1) -> [1, 2, 3]
     }
     procedure repetirN(var p: tPilaEnterosExt; n: integer);
     begin
@@ -266,40 +261,7 @@ implementation
     end;
 
     { 
-        2.8 Insertar en n
-        Procedimiento que recibe una pila de enteros, un entero x y un entero n. 
-        Inserta el elemento x en la posición n de la pila.
-        Entrada: pila de enteros, entero x, entero n. n > 0
-        Salida: se modifica la pila insertando el elemento x en la posición n.
-                Si n es mayor al tamaño de la pila, se inserta al final.
-        Ejemplos: 
-            - insertarEnN([1, 2, 3, 4, 5], 10, 2) -> [1, 10, 2, 3, 4, 5]
-            - insertarEnN([1, 2, 3, 4, 5], 10, 1) -> [10, 1, 2, 3, 4, 5]
-            - insertarEnN([1, 2, 3, 4, 5], 10, 5) -> [1, 2, 3, 4, 10, 5]
-            - insertarEnN([1, 2, 3, 4, 5], 10, 6) -> [1, 2, 3, 4, 5, 10]
-    }
-    procedure insertarEnN(var p: tPilaEnterosExt; x, n: integer);
-    begin
-        WriteLn('Implementa la función insertarEnN');
-    end;
-
-    { 
-        2.9 Intercambiar Max y Min
-        Procedimiento que recibe una pila de enteros. 
-        Intercambia el elemento máximo con el mínimo.
-        Entrada: pila de enteros. No hay elementos repetidos.
-        Salida: se modifica la pila intercambiando el elemento máximo con el mínimo.
-        Ejemplos: 
-            - intercambiarMaxMin([1, 2, 3, 4, 5]) -> [5, 2, 3, 4, 1]
-            - intercambiarMaxMin([1, 2, 3, 4, 5, 6]) -> [6, 2, 3, 4, 5, 1]
-    }
-    procedure intercambiarMaxMin(var p: tPilaEnterosExt);
-    begin
-        WriteLn('Implementa la función intercambiarMaxMin');
-    end;
-
-    { 
-        2.10 Contar apariciones de elemento n
+        2.8 Contar apariciones de elemento n
         Función que recibe una pila de enteros y un entero n. 
         Devuelve la cantidad de veces que aparece el elemento n en la pila.
         Entrada: pila de enteros, entero n

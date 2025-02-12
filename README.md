@@ -157,7 +157,8 @@ Puede que modificar el registros tPilaEnterosExt...
 
 ### 2.2 ultimo:
 
-Define una función `ultimo` para obtener el elemento en la última posición de la pila.
+Define una función `ultimo` para obtener el elemento en la última posición de la pila. Es decir, el encuentro que se encuentra sumergido en la pila. 
+Se puede entender esta función como una operación opuesta "peek" en la pila.
 
 - **Entradas**:
     - Pila de enteros.
