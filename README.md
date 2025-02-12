@@ -62,7 +62,7 @@ Este archivo contiene la definición de la pila de caracteres. La pila de caract
 
 - **Devuelve el elemento de la cima de la pila**
     ```pascal
-    procedure peek(p: tPilaChars; var x: char);
+    function peek(p: tPilaChars): char;
     ```
 
 - **Devuelve true si la pila está vacía**
@@ -225,41 +225,15 @@ Define un procedimiento `invertir` para invertir una pila.
 Define un procedimiento `repetirN` para repetir n veces los elementos de la pila.
 
 - **Entradas**:
-    - Pila de enteros, entero n.
+    - Pila de enteros, entero n (n >= 1).
 - **Salida**:
     - Modifica la pila repitiendo n veces los elementos.
 - **Ejemplos**:
     - `repetirN([1, 2, 3], 2)` -> `[1, 1, 2, 2, 3, 3]`
-    - `repetirN([1, 2, 3], 0)` -> `[1, 2, 3]`
+    - `repetirN([1, 2, 3], 1)` -> `[1, 2, 3]`
     - `repetirN([], 2)` -> `[]`
 
-### 2.8 insertarEnN:
-
-Define un procedimiento `insertarEnN` para insertar un elemento en la posición n de la pila.
-
-- **Entradas**:
-    - Pila de enteros, entero x, entero n. n > 0.
-- **Salida**:
-    - Modifica la pila insertando el elemento x en la posición n. Si n es mayor al tamaño de la pila, se inserta al final.
-- **Ejemplos**:
-    - `insertarEnN([1, 2, 3, 4, 5], 10, 2)` -> `[1, 10, 2, 3, 4, 5]`
-    - `insertarEnN([1, 2, 3, 4, 5], 10, 1)` -> `[10, 1, 2, 3, 4, 5]`
-    - `insertarEnN([1, 2, 3, 4, 5], 10, 5)` -> `[1, 2, 3, 4, 10, 5]`
-    - `insertarEnN([1, 2, 3, 4, 5], 10, 6)` -> `[1, 2, 3, 4, 5, 10]`
-
-### 2.9 intercambiarMaxMin:
-
-Define un procedimiento `intercambiarMaxMin` para intercambiar el elemento máximo con el mínimo.
-
-- **Entradas**:
-    - Pila de enteros. No hay elementos repetidos.
-- **Salida**:
-    - Modifica la pila intercambiando el elemento máximo con el mínimo.
-- **Ejemplos**:
-    - `intercambiarMaxMin([1, 2, 3, 4, 5])` -> `[5, 2, 3, 4, 1]`
-    - `intercambiarMaxMin([1, 2, 3, 4, 5, 6])` -> `[6, 2, 3, 4, 5, 1]`
-
-### 2.10 contarApariciones:
+### 2.8 contarApariciones:
 
 Define una función `contarApariciones` para contar las apariciones de un elemento en la pila.
 
@@ -285,12 +259,10 @@ Ejercicio 2.5: TRUE
 Ejercicio 2.6: TRUE
 Ejercicio 2.7: TRUE
 Ejercicio 2.8: TRUE
-Ejercicio 2.9: TRUE
-Ejercicio 2.10: TRUE
 ```
 
 
-# Ejercicio 3: Inversión de Pila de Elementos
+# Ejercicio 3: Genericos: Inversión de Pila de Elementos
 
 En este ejercicio, trabajaremos con la inversión de una pila de elementos. Para ello, se proporcionan tres archivos Pascal:
 
@@ -314,7 +286,12 @@ Este archivo define el tipo de registro `TElement`, que representará un libro e
 - `idioma`: string[50]
 - `numPaginas`: integer
 
-Además, incluye la función:
+Además, incluye las dos siguientes funciones:
+
+-  **Asignar un elemento a otro**
+    ```pascal
+    procedure assign(var e: TElement; e2 : TElement);
+    ```
 
 - **Convierte un elemento a cadena**
     ```pascal
