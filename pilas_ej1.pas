@@ -5,8 +5,6 @@ uses
     uPilaChar; { 1.1 Genera una unidad pila cuyos nodos almacenen un único carácter.}
 
 
-
-
 { 1.2
     Define una función balanceada para comprobar el balance de paréntesis de una expresión aritmética.
     Una expresión aritmética está balanceada si cada paréntesis de apertura tiene un paréntesis de cierre correspondiente.
@@ -14,7 +12,6 @@ uses
     No se comprobará si los paréntesis están en el lugar correcto (por ejemplo, (3+2*)5 o 3(+4-)2 no es una expresión aritmética 
     válida pero vamos a considerarla balanceada).
     - Entradas:
-        - Pila de caracteres 
         - Una cadena de caracteres que representa una expresión aritmética.
     - Salida:
         - Devuelve true si la expresión está balanceada, es decir, si los paréntesis están correctamente cerrados y anidados.
@@ -28,7 +25,6 @@ uses
 { 1.3
     Mejora la función balanceada para que compruebe también los corchetes.
     - Entradas:
-        - Pila de caracteres 
         - Una cadena de caracteres que representa una expresión aritmética.
     - Salida:
         - Devuelve true si la expresión está balanceada, es decir, si los paréntesis y corchetes están correctamente cerrados y anidados.
