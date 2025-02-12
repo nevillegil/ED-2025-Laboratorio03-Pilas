@@ -76,11 +76,10 @@ En este archivo, los estudiantes deben desarrollar dos funciones:
 
 ### 1.2 balanceada: 
 
-Define una función `balanceada` para comprobar el balance de paréntesis de una expresión aritmética. Una expresión aritmética está balanceada si cada paréntesis de apertura tiene un paréntesis de cierre correspondiente. Los paréntesis deben estar correctamente anidados. No se comprobará si los paréntesis están en el lugar correcto (por ejemplo, `(3+2*)5` o `3(+4-)2` no es una expresión aritmética válida pero vamos a considerarla balanceada).
+Define una función `balanceada` que, utilizando una pila de caracteres, compruebe el balance de paréntesis de una expresión aritmética. Una expresión aritmética está balanceada si cada paréntesis de apertura tiene un paréntesis de cierre correspondiente. Los paréntesis deben estar correctamente anidados. No se comprobará si los paréntesis están en el lugar correcto (por ejemplo, `(3+2*)5` o `3(+4-)2` no es una expresión aritmética válida pero vamos a considerarla balanceada).
 
 - **Entradas**:
     - Pila de caracteres 
-    - Una cadena de caracteres que representa una expresión aritmética.
 - **Salida**:
     - Devuelve `true` si la expresión está balanceada, es decir, si los paréntesis están correctamente cerrados y anidados.
 - **Ejemplos**:
@@ -91,11 +90,10 @@ Define una función `balanceada` para comprobar el balance de paréntesis de una
 
 ### 1.3 balanceada2:
 
-Mejora la función `balanceada` para que compruebe también el balance de corchetes. Una expresión aritmética está balanceada si cada paréntesis de apertura tiene un paréntesis de cierre correspondiente y cada corchete de apertura tiene un corchete de cierre correspondiente.
+Mejora la función `balanceada`, utilizando una pila de caracteres, para que compruebe también el balance de corchetes. Una expresión aritmética está balanceada si cada paréntesis de apertura tiene un paréntesis de cierre correspondiente y cada corchete de apertura tiene un corchete de cierre correspondiente.
 
 - **Entradas**:
     - Pila de caracteres 
-    - Una cadena de caracteres que representa una expresión aritmética.
 - **Salida**:
     - Devuelve `true` si la expresión está balanceada, es decir, si los paréntesis y corchetes están correctamente cerrados y anidados.
 - **Ejemplos**:
