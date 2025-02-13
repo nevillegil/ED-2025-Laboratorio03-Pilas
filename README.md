@@ -41,9 +41,9 @@ En este ejercicio, trabajaremos con operaciones básicas de pilas. Para ello, se
 - `uPilaChar.pas`
 - `pilas_ej1.pas`
 
-## Ejercicio 1.1 `uPilaChar.pas`
+## Ejercicio 1.1 Implemementar un TAD Pila de Caracteres en `uPilaChar.pas`
 
-Este archivo contiene la definición de la pila de caracteres. La pila de caracteres es una pila que almacena caracteres. La pila de caracteres tiene las operaciones básicas de una pila:
+Este archivo contiene la definición de la pila de caracteres pero no su implementación. La pila de caracteres es un TAD que da soporte al concepto de una pila que almacena caracteres y por tanto, tiene las operaciones básicas de una pila:
 
 - **Inicializa la pila**
     ```pascal
@@ -70,6 +70,8 @@ Este archivo contiene la definición de la pila de caracteres. La pila de caract
     function isEmpty(p: tPilaChars): boolean;
     ```
 
+Tu cometido en este punto es implementar todas las funciones básicas de la Pila de Caracteres. Puedes elegir para su implementación el modelo de pila implementada con un array o pila con punteros y memoria dinámica. Se recomienda este último modelo, y se sugiere que el del array se haga también como trabajo extra en casa.
+
 ## Ejercicios 1.2 y 1.3 en `pilas_ej1.pas`
 
 En este archivo, los estudiantes deben desarrollar dos funciones:
@@ -79,7 +81,7 @@ En este archivo, los estudiantes deben desarrollar dos funciones:
 Define una función `balanceada` que, utilizando una pila de caracteres, compruebe el balance de paréntesis de una expresión aritmética. Una expresión aritmética está balanceada si cada paréntesis de apertura tiene un paréntesis de cierre correspondiente. Los paréntesis deben estar correctamente anidados. No se comprobará si los paréntesis están en el lugar correcto (por ejemplo, `(3+2*)5` o `3(+4-)2` no es una expresión aritmética válida pero vamos a considerarla balanceada).
 
 - **Entradas**:
-    - Pila de caracteres 
+    - Una cadena de caracteres que representa una expresión aritmética
 - **Salida**:
     - Devuelve `true` si la expresión está balanceada, es decir, si los paréntesis están correctamente cerrados y anidados.
 - **Ejemplos**:
@@ -93,7 +95,7 @@ Define una función `balanceada` que, utilizando una pila de caracteres, comprue
 Mejora la función `balanceada`, utilizando una pila de caracteres, para que compruebe también el balance de corchetes. Una expresión aritmética está balanceada si cada paréntesis de apertura tiene un paréntesis de cierre correspondiente y cada corchete de apertura tiene un corchete de cierre correspondiente.
 
 - **Entradas**:
-    - Pila de caracteres 
+    - Una cadena de caracteres que representa una expresión aritmética.
 - **Salida**:
     - Devuelve `true` si la expresión está balanceada, es decir, si los paréntesis y corchetes están correctamente cerrados y anidados.
 - **Ejemplos**:
